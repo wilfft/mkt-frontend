@@ -1,0 +1,23 @@
+import React, { useState } from "react";
+import Header from "../build/Header";
+function App() {
+  let [counter, setCounter] = useState(0);
+
+  function increment() {
+    setCounter(counter + 1);
+  }
+  function decrement() {
+    setCounter(counter - 1);
+  }
+  return (
+    <>
+      <Header title="Mkt Friends" />
+      <h1> Counter = {counter} </h1>
+      <button onClick={decrement}> Remove </button>
+      <button onClick={increment}> Add </button>
+      <br />
+    </>
+  );
+}
+
+export default App;
