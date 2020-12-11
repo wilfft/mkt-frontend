@@ -8,24 +8,30 @@ import "./style.css";
 
 export default function Register() {
   const [name, setName] = useState("");
-  const [login, setLogin] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-
+  const [city, setCity] = useState("");
+  const [uf, setUf] = useState("");
+  const [ddd, setDDD] = useState("");
   const history = useHistory();
 
+  //storing data on register click
+  //vou concatenar o ddd com o celular pra inserir no banco
   async function handleRegister(e) {
     e.preventDefault();
-    const data = { name, login, password, email };
+    const data = { name, cpf, email, password, city, whatsapp, ddd };
 
     try {
       const response = await api.post("users", data);
       history.push("/");
-      alert("Seu ID De acesso é: " + response.data._id);
+      alert("Seu login De acesso é o seu cpf : " + response.data.cpf);
     } catch (err) {
       alert("erro no cadastro, tente novamente");
     }
   }
+
   return (
     <div className="register-container">
       <div className="content">
@@ -45,25 +51,59 @@ export default function Register() {
             onChange={(e) => setName(e.target.value)}
           />
           <input
+            placeholder="CPF"
+            type="number"
+            value={cpf}
+            onChange={(e) => setCpf(e.target.value)}
+          />
+          <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <input
-            placeholder="Login"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
-          />
-          <input
-            placeholder="password"
-            type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="input-group">
-            <input placeholder="Cidade" />
-            <input placeholder="UF" style={{ width: 80 }} />
+            <input
+              placeholder="DDD"
+              value={ddd}
+              type="number"
+              maxlength="2"
+              onChange={(e) => setDDD(e.target.value)}
+              style={{ width: 100 }}
+            />
+            <input
+              placeholder="Whatsapp"
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              type="number"
+            />
+          </div>
+          <div className="input-group">
+            <input
+              placeholder="UF"
+              value={uf}
+              maxlength="2"
+              onChange={(e) => setUf(e.target.value)}
+              style={{ width: 100 }}
+            />
+            <input
+              placeholder="Cidade"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            {/*      para implementar no futuro
+            <select value={uf} onChange={(e) => setUf(e.target.value)}>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="lime">Lime</option>
+              <option value="coconut">Coconut</option>
+              <option value="mango">Mango</option>
+            </select> JSX */}
           </div>
           <button className="button" type="submit">
             Cadastrar

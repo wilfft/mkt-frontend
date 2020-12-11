@@ -23,6 +23,7 @@
 
 .register-container .content section {
   width: 100%;
+  position: relative;
   max-width: 380px;
 }
 
@@ -43,6 +44,7 @@
 }
 
 .register-container .content form input {
+  line-height: 200px;
   margin-top: 8px;
 }
 

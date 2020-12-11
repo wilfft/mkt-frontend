@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
+
 import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api"; //vai puxar servir pra dados do banco
-import { FiPower, FiTrash2 } from "react-icons/fi";
+import { FiPower, FiTrash } from "react-icons/fi";
 import logoImg from "../../assets/logo.svg";
-
+import "./style.css";
 export default function Profile() {
   const [items, setItems] = useState([]);
   const userName = localStorage.getItem("userName");
+  let userId = localStorage.getItem("userId");
+
   const history = useHistory();
-  let userID = localStorage.getItem("userId");
 
   useEffect(() => {
-    api
-      .get("users/profile", { headers: { Autorization: userID } })
-      .then((e) => {
-        setItems(e.data);
-      });
-  }, [userID]);
+    api.get("profile", { headers: { autorization: userId } }).then((e) => {
+      setItems(e.data);
+    });
+  }, [userId]);
 
   async function handleDeleteProduct(id, item_name) {
-    alert("Produto " + item_name + " removido com sucesso");
     try {
-      await api.put(`users/${id}`, {
-        headers: { Autorization: userID },
+      await api.patch("user/" + id, {
+        headers: { autorization: userId },
       });
       //aqui para atualizar os itens, vamos chamar o useState pelo setItens
       //e filtrar minha array de itens com os itens MENOS o id clicado
-      setItems(items.filter((item) => item._id != id));
+      alert("Produto " + item_name + " removido com sucesso");
+      console.log(id);
+      setItems(items.filter((item) => item._id !== id));
     } catch (err) {
       alert("erro");
     }
@@ -55,6 +55,7 @@ export default function Profile() {
           <li key={item._id}>
             <strong>PRODUTO:</strong>
             <p>{item.item_name}</p>
+
             <strong>DESCRIÇÃO:</strong>
             <p>{item.item_description}</p>
             <strong>VALOR:</strong>
@@ -65,14 +66,11 @@ export default function Profile() {
               }).format(item.item_value)}{" "}
             </p>
 
-            <strong>Ativo:</strong>
-            <p>{item.is_active}</p>
-
             <button
               onClick={() => handleDeleteProduct(item._id, item.item_name)}
               type="button"
             >
-              <FiTrash2 size={20} color="#a8a8b3" />
+              <FiTrash className="icon" size={30} color="#a8a8b3" />
             </button>
           </li>
         ))}

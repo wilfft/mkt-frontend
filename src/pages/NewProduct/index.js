@@ -9,15 +9,17 @@ export default function NewProduct() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  let userId = localStorage.getItem("userId");
+  let id = localStorage.getItem("userId");
   const history = useHistory();
+
   async function handleAddProduct(e) {
     e.preventDefault();
+
     const data = { title, description, price };
 
     try {
-      await api.patch("users/itens/", data, {
-        headers: { Autorization: userId },
+      await api.patch("product", data, {
+        headers: { Authorization: id },
       });
       //o id vai vir pelo header
       history.push("/profile");
@@ -52,9 +54,11 @@ export default function NewProduct() {
 
           <input
             value={price}
+            type="number"
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Valor em Reais"
           />
+
           <button className="button" type="submit">
             Cadastrar
           </button>
