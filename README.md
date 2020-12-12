@@ -31,8 +31,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 #### 
 
-![image-20201211152746337](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211152746337.png)
-
+![image](https://user-images.githubusercontent.com/68745408/101971668-ecce8480-3c11-11eb-9c82-8707644c0021.png)
 --------------
 
 ------------
@@ -44,8 +43,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 - Será feita uma chamada pra Api, utilizando o axios, (importado de outro módulo) para requisições com o ambiente externo. 
 - Essa requisição de modo POST vai chamar a rota de adicionar usuário, passando para o backend todo o conteúdo obtido do form de cadastro.
 
-![image-20201211170324807](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211170324807.png)
-
+![image-20201211170324807](https://user-images.githubusercontent.com/68745408/101971740-446cf000-3c12-11eb-8ccd-80302173ec5d.png)
 ------------------
 
 -----------
@@ -63,10 +61,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 - Note que o useEffect vai reagir toda vez que o userId armazenado no local storage for alterado, ou seja, no proximo login, os dados serão outros.
 - Temos um botão Cadastrar novo produto que nos levará para a próxima tela e o botão de logout, que vai limpar nosso cache e deslogando do sistema.
 
-
-
-![image-20201211164434916](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211164434916.png)
-
+ ![image-20201211164434916](https://user-images.githubusercontent.com/68745408/101971738-42a32c80-3c12-11eb-9900-d53558aaf3f9.png)
 ---------
 
 -------
@@ -79,8 +74,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 - Ao clique do cadastrar, passaremos pro backend os dados do body e também o _id do usuário armazenado no local storage, esse  id será enviado através do headers com o nome de Autorization.  ( errata: faltou um h no authorization, que será corrigido em breve para evitar erros futuros no código)
 - A chamada a api (axios) vai chamar a rota patch, pra atualizar o usuário com o novo produto adicionar.
 
-![image-20201211171514709](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211171514709.png)
-
+![image-20201211171514709](https://user-images.githubusercontent.com/68745408/101971743-459e1d00-3c12-11eb-8143-d7dec42e26fb.png)
 ------------
 
 -------------
@@ -89,7 +83,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 ## Serviço de requisição com o ambiente externo, utilizando o Axios
 
-![image-20201211175006888](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211175006888.png)
+![image-20201211175006888](https://user-images.githubusercontent.com/68745408/101971684-0b348000-3c12-11eb-9314-836bf2e5cb87.png)
 
 ---
 
@@ -101,10 +95,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir acesso exclusivo de cada rota
 
-
-
-![image-20201211175113251](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211175113251.png)
-
+![image-20201211175113251](https://user-images.githubusercontent.com/68745408/101971685-0cfe4380-3c12-11eb-919a-b6ed6911f59a.png)
 ----
 
 -----------
@@ -123,7 +114,7 @@ Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir
 - senão retorna usuário não encontrado
 - se a requisição falhar, um erro será exibido
 
-![image-20201211191930617](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211191930617.png)
+![image-20201211191930617](https://user-images.githubusercontent.com/68745408/101971721-328b4d00-3c12-11eb-86fe-9166dcfb014b.png)
 
 -----
 
@@ -136,8 +127,7 @@ Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir
 - os dados recebido do body do form são usados para gerar um novo userModel
 - uma função assincrona irá persistir essse novo usuário no banco.
 
-![image-20201211191909174](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211191909174.png)
-
+![image-20201211191909174](https://user-images.githubusercontent.com/68745408/101971720-31f2b680-3c12-11eb-9d77-9f3578e17998.png)
 ----
 
 -----
@@ -150,10 +140,7 @@ Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir
 - assim que localizado, iremos passar para o front somente os itens desse usuário localizado.
 
 
-
-![image-20201211182812486](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211182812486.png)
-
-
+![image-20201211182812486](https://user-images.githubusercontent.com/68745408/101971695-1a1b3280-3c12-11eb-9c04-35699a371aa7.png)
 
 --------
 
@@ -163,7 +150,7 @@ Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir
 
 A requisição recebe do front, o id pelo headers e os dados do item pelo body.
 
-![image-20201211183743887](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211183743887.png)
+![image-20201211183743887](https://user-images.githubusercontent.com/68745408/101971699-1daeb980-3c12-11eb-8863-7b65895004ba.png)
 
 ----
 
@@ -174,22 +161,19 @@ A requisição recebe do front, o id pelo headers e os dados do item pelo body.
 - Recebe o id do usuário através do headers e o id do produto pelos parâmetros da rota.
 - É executado uma query no banco pra remover o item 
 
-![image-20201211185154262](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211185154262.png)
-
+ 
+ ![image-20201211185154262](https://user-images.githubusercontent.com/68745408/101971709-2901e500-3c12-11eb-9529-fb986ce952a6.png)
 ----
 
 ### userSchema = model do usuário, que contem todos seus atributos, usado pelo mongoose  para persistir os dados no banco.
 
 
-
-![image-20201211191131642](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211191131642.png)
-
+ ![image-20201211191131642](https://user-images.githubusercontent.com/68745408/101971711-2acba880-3c12-11eb-983b-6b780fc3c88b.png)
 ----
 
 ### Routes - auto explicativo, nossas rotas, que são são interligadas com os controladores.
-
-![image-20201211191758744](C:\Users\wil\AppData\Roaming\Typora\typora-user-images\image-20201211191758744.png) 
-
+ 
+ ![image-20201211191758744](https://user-images.githubusercontent.com/68745408/101971716-2f905c80-3c12-11eb-8943-d35d99f9f44c.png)
 
 
 
