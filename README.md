@@ -2,13 +2,13 @@
 
 
 
-# Um aplicativo simples, com as serviços independentes, back end, front end e mobile.
+# Um aplicativo simples, com as serviços independentes, back end, front end e mobile.  :ok_hand:
 
-> Desenvolvido em React e NodeJs
+> Desenvolvido em React e NodeJs 
 >
 > Apoiado nas ferramentas, express, axios
 >
-> Persistência de dados usando banco não relacional, Mongo db, via atlas.
+> Persistência de dados usando banco não relacional, Mongo db, via atlas. 
 >
 
 A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permita que os usuários se cadastrem e venda seus produtos um para os outros, como um classificado. As regras de negócios serão implementadas assim que mais conhecimento for adquirido.
@@ -17,8 +17,8 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 
 
-# Front End
-
+# Front End  :cyclone:
+ 
 ### LOGON - página de acesso e logon
 
 - O app exibe uma tela de login inicial, que permite a inserção de CPF e Senha ou a opção de cadastrar através do 'não tenho cadastro.'
@@ -35,8 +35,8 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 --------------
 
 ------------
-
-### Register - página de novo usuário
+ 
+### Register - página de novo usuário  :construction_worker:
 
 - Temos um formulário comum, onde ainda não está totalmente validado mas será implementado em breve.
 - O sistema permite a inserção  de dados básicos para o cadastro e os armazena na variável de estado . 
@@ -50,7 +50,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 
 
-### Profile- página após feito o logon, onde exibe todos produtos cadastrados do usuário.
+### Profile- página após feito o logon, onde exibe todos produtos cadastrados do usuário.  :mag_right:
 
 - A página exibe os produtos que são trazidos do backend assim que o modulo for carregado, graças ao useEffect.
 - o useEffect, junto do axios (api) , envia uma requisição externa para o banco, passando como argumento  o ' _id ' que está armazenado no local storage, porém ele transfere essa informação através do 'headers' e recebe como resposta os itens como um array.
@@ -68,7 +68,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 
 
-### New Product - página acionada após clicar no botão cadastrar novo produto
+### New Product - página acionada após clicar no botão cadastrar novo produto :hammer:
 
 - Um formulário recebe os dados do produto.
 - Ao clique do cadastrar, passaremos pro backend os dados do body e também o _id do usuário armazenado no local storage, esse  id será enviado através do headers com o nome de Autorization.  ( errata: faltou um h no authorization, que será corrigido em breve para evitar erros futuros no código)
@@ -81,7 +81,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 
 
-## Serviço de requisição com o ambiente externo, utilizando o Axios
+## Serviço de requisição com o ambiente externo, utilizando o Axios :satellite:
 
 ![image-20201211175006888](https://user-images.githubusercontent.com/68745408/101971684-0b348000-3c12-11eb-9314-836bf2e5cb87.png)
 
@@ -91,7 +91,7 @@ A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permit
 
 
 
-## Rotas para comunicação com o backend 
+## Rotas para comunicação com o backend  :telephone_receiver:
 
 Foi usado o BrowserRouter para o gerenciamento das urls e o Switch para garantir acesso exclusivo de cada rota
 
