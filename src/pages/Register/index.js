@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import logoImg from "../../assets/logo.svg";
@@ -17,8 +16,6 @@ export default function Register() {
   const [ddd, setDDD] = useState("");
   const history = useHistory();
 
-  //storing data on register click
-  //vou concatenar o ddd com o celular pra inserir no banco
   async function handleRegister(e) {
     e.preventDefault();
     const data = { name, cpf, email, password, city, whatsapp, ddd };
@@ -62,7 +59,6 @@ export default function Register() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <input
             placeholder="Password"
             value={password}
@@ -97,13 +93,6 @@ export default function Register() {
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
-            {/*      para implementar no futuro
-            <select value={uf} onChange={(e) => setUf(e.target.value)}>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="lime">Lime</option>
-              <option value="coconut">Coconut</option>
-              <option value="mango">Mango</option>
-            </select> JSX */}
           </div>
           <button className="button" type="submit">
             Cadastrar

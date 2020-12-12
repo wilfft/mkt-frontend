@@ -26,7 +26,7 @@ export default function Profile() {
       //aqui para atualizar os itens, vamos chamar o useState pelo setItens
       //e filtrar minha array de itens com os itens MENOS o id clicado
       alert("Produto " + item_name + " removido com sucesso");
-      console.log(id);
+
       setItems(items.filter((item) => item._id !== id));
     } catch (err) {
       alert("erro");
@@ -78,35 +78,3 @@ export default function Profile() {
     </div>
   );
 }
-
-/*
- <ul>
-        {itens.map((item) => (
-          <li key={item._id}>
-            <strong>PRODUTO:</strong>
-            <p>{item.title}</p>
-            <strong>PRODUTO:</strong>
-            <p>{item.description}</p>
-            <strong>VALOR:</strong>
-            <p>R$ {item.value}</p>
-            <strong>Anunciado:</strong>
-            <p>R$ {item.is_active}</p>
-
-            <button type="button">
-              <FiTrash2 size={20} color="#a8a8b3" />
-            </button>
-          </li>
-        ))}
-      </ul>
-*/
-/*
-  useEffect(() => {
-    api.get("users/item", { userID }).then((response) => {
-      console.log(response.data);
-      setItems(response.data.item);
-    });
-  }, [userID]); //é interessante colocar o userID como dependencia
-  //  const arr = ([] = Array.from(response.data));
-  //  console.log(arr);
-  //  const array = response.data.item;
-  */
