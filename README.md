@@ -12,9 +12,7 @@
 >
 
 A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permita que os usuários se cadastrem e venda seus produtos um para os outros, como um classificado. As regras de negócios serão implementadas assim que mais conhecimento for adquirido.
-
-> O conhecimento aplicado foi adquirido na semana Omnistack 11 da RockeSeat, refiz o código do zero praticamente sozinho, menos o html e css, para que eu consigo alcançar fluência na linguagem. Tive que recorrer algumas vezes para 'colar' e corrigir bugs. Estarei finalizando os Bootcamp e aprenstar projetos melhores,
-
+ 
 
 
 # Front End  :cyclone:
