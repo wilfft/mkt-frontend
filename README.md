@@ -2,16 +2,16 @@
 
 
 
-# Um aplicativo simples, com as serviços independentes, back end, front end e mobile.  :ok_hand:
+# Um aplicativo fullstack com back end, front end e mobile independentes.  :ok_hand:
 
 > Desenvolvido em React e NodeJs 
 >
-> Apoiado nas ferramentas, express, axios
+> Ferramentas utilizadas, express e axios
 >
-> Persistência de dados usando banco não relacional, Mongo db, via atlas. 
+> Persistência de dados usando banco não relacional: Mongo db, online via atlas. 
 >
 
-A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permita que os usuários se cadastrem e venda seus produtos um para os outros, como um classificado. As regras de negócios serão implementadas assim que mais conhecimento for adquirido.
+A ideia inicial foi desenvolver um aplicativo tanto web quanto mobile que permita que os usuários se cadastrem e cadastrem seus produtos e venda um para os outros, como um rede social de classificados. As regras de negócios serão implementadas futuramente.
  
 
 
@@ -176,11 +176,10 @@ A requisição recebe do front, o id pelo headers e os dados do item pelo body.
 
 
 
-## CONCLUSÃO
+## SITUAÇÃO
 
-> Esse projeto, apesar de extremamente simples me trouxe extrema satisfação, por estar a menos de 2 semanas focando somente na stack MERN sinto que cada vez mais ganho fluência com o framework. Pretendo ampliar para algum outro banco relacional como o Postgre, mas focado no react/react native
->
-> Foram muitos erros encontrados ao longo do caminho que atrasou bastante mas tudo foi aprendizado e todos os erros e acertos são registrado para que não ocorram novamente.
+> Resta desenvolver a regra de negócio e possibilitar a compra e venda entre usuários.
+ 
 
 O próximo passo será criar os testes automatizados e as validações, logo depois o deploy para fins de aprendizado.
 
